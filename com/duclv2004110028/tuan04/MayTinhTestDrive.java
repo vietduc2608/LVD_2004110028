@@ -69,4 +69,8 @@ public class MayTinhTestDrive {
             mayTinh.xuatThongTin();
         }
     }
+    private static void suaThongTin()
+    {
+
+    }
 }
