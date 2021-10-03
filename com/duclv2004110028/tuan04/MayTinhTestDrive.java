@@ -26,6 +26,9 @@ public class MayTinhTestDrive {
                 case 3:
                 inThongTin();
                 break;
+                default:
+                System.out.println("Lựa Chọn Không Hợp Lệ!!!");
+            
             }
         }while(true);
     }
@@ -69,8 +72,5 @@ public class MayTinhTestDrive {
             mayTinh.xuatThongTin();
         }
     }
-    private static void suaThongTin()
-    {
-
-    }
+    
 }
