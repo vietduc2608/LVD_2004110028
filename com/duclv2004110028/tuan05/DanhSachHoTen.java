@@ -1,16 +1,15 @@
 package com.duclv2004110028.tuan05;
 
 import java.util.ArrayList;
-
 import java.util.Collections;
 import java.util.Scanner;
 
 public class DanhSachHoTen {
     static Scanner sc = new Scanner(System.in);
-    private ArrayList<String> list = new ArrayList<>();
+    static ArrayList<String> list = new ArrayList<>();
 
     public void nhap(){
-        Scanner sc = new Scanner(System.in);
+        sc.nextLine();
         do {
             System.out.println("Nhập họ tên: ");
             String st = sc.nextLine();
