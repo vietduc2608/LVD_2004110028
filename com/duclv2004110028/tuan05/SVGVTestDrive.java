@@ -45,6 +45,7 @@ public class SVGVTestDrive {
         System.out.println("=3=========Xuất Danh Sách Sinh Viên Theo Điểm=======");
         System.out.println("=4===============Tìm Sinh Viên Theo Tên=============");
         System.out.println("=5============Tìm Và Xóa Sinh Viên Theo Tên=========");
+        System.out.println("=6============Tìm Và Xóa Sinh Viên Theo Điểm========");
         System.out.println("=0======================THOÁT=======================");
     }
     private static void nhapDanhSach(){

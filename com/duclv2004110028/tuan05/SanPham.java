@@ -42,13 +42,6 @@ public void hienThi(){
     }
 }
 
-// public void xuat() {
-//     System.out.println("Danh sách sản phẩm: ");
-//     for (SanPham sanPham : list) {
-//         System.out.println("Sản Phẩm: "+ sanPham);            
-    // }
-    
-
 // public void sapXep(){
 //     Collections.sort(list, (a,b)->(int) (a.compareTo(b));
 //     System.out.println("Danh sách sau khi sắp xếp: ");
@@ -71,9 +64,9 @@ public void meNu() {
     do {
         System.out.println("=====Menu=====");
         System.out.println("1.Nhập danh sách");
-        System.out.println("2.Hiển thị danh sách");
-        System.out.println("3.Sắp xếp giảm dần theo giá");
-        System.out.println("4.Tìm và xóa sản phẩm theo tên");
+        System.out.println("2.Hiển thị danh sách");      
+        System.out.println("3.Tìm và xóa sản phẩm theo tên");
+        // System.out.println("4.Sắp xếp giảm dần theo giá");
         System.out.println("Lựa chọn của bạn là: ");
         int choice = sc.nextInt();
         

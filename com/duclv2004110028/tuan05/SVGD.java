@@ -21,7 +21,7 @@ public void nhapThongTin()
         diemTB = sc.nextDouble();
     }
 public void inThongTin(){
-        System.out.println("Tên Sinh Viên: "+hoTen  +"Điểm: "+diemTB);
+        System.out.println("Tên Sinh Viên: "+hoTen  +" Điểm: "+diemTB);
     }
 
 }
