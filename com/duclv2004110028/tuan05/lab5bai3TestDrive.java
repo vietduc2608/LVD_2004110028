@@ -15,7 +15,8 @@ public class lab5bai3TestDrive {
         System.out.println("1.Nhập danh sách");      
         System.out.println("2.Tìm và xóa sản phẩm theo tên");
         System.out.println("3.Sắp xếp giảm dần theo giá");
-        System.out.println("4.Xuất Giá Trung Bình");
+        System.out.println("4.Xuất Thông Tin");
+        System.out.println("5.Xuất Giá Trung Bình");
         System.out.println("Lựa chọn của bạn là: ");
         int n = sc.nextInt();
 
@@ -35,6 +36,9 @@ public class lab5bai3TestDrive {
             case 4:
             xuatThongTin();
             break;
+            // case 5:
+            // xuatGiaTrungBinh();
+            // break;
             default:
             System.out.println("Lựa chọn ko hợp lệ! Vui lòng chọn lại");
         }
@@ -91,8 +95,16 @@ public class lab5bai3TestDrive {
         xuatThongTin();
         
     }
-    // public void xuatGiaTrungBinh() {
-  
+    // public static void xuatGiaTrungBinh() {
+    //     Collections.sort(l5b3s, new Comparator<lab5bai3>(){
+    //         @Override
+    //         public int compare(lab5bai3 o1, lab5bai3 o2){
+    //             for (lab5bai3 lab5bai3 : l5b3s) {
+    //                 lab5bai3.inThongTin();
+    //             }
+    //             return 0;
+    //         }
+    //     });
     // }
     public static void xuatThongTin() {
         System.out.printf("%-20S %-20S %-20S %-20S\n","Tên Sản Phẩm", "Đơn Giá","Giảm Giá","Thuế");
