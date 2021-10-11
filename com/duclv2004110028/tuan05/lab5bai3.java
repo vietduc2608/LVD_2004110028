@@ -19,7 +19,7 @@ public void nhapThongTin(){
     thuenhapkhau = sc.nextDouble();
     }  
 public void inThongTin() {
-    System.out.printf("%-20S %-20.2f %-20.2f %-20.2f\n",tensanpham, dongia, giamgia, thuenhapkhau);
+    System.out.printf("%-20S %-20.2f %-20.2f %-20.2f\n",tensanpham, dongia, giamgia, thuenhapkhau); 
     }
      
 }

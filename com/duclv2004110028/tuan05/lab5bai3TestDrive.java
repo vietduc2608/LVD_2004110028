@@ -66,16 +66,27 @@ public class lab5bai3TestDrive {
         xuatThongTin();
     }    
     public static void sapXep() {
-        Collections.sort(l5b3s, new Comparator<lab5bai3>(){
+        //C1:
+        // Collections.sort(l5b3s, new Comparator<lab5bai3>(){
+        //     @Override
+        //     public int compare(lab5bai3 o1, lab5bai3 o2) {
+        //         if(o1.dongia < o2.dongia)
+        //         {
+        //             return -1;
+        //         }
+        //         return 1;
+        //     }
+        // }); 
+        // System.out.println("Danh sách sau khi sắp xếp: ");
+        // xuatThongTin();
+        //C2:
+        Comparator<lab5bai3> comp = new Comparator<lab5bai3>(){
+
             @Override
             public int compare(lab5bai3 o1, lab5bai3 o2) {
-                if(o1.dongia < o2.dongia)
-                {
-                    return -1;
-                }
-                return 1;
+                return Double.compare(o1.dongia, o2.dongia);
             }
-        }); 
+        };
         System.out.println("Danh sách sau khi sắp xếp: ");
         xuatThongTin();
         
