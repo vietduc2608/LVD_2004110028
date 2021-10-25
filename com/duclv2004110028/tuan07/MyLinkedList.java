@@ -7,7 +7,7 @@ public class MyLinkedList {
 
     public MyLinkedList(){}
 
-    void push(int data){
+    void addFirst(int data){
         Node newNode = new Node(data);
         if(head == null){//thêm 1 nút vào ds rỗng
             head = newNode;
@@ -17,7 +17,7 @@ public class MyLinkedList {
         }
     }
     
-    void add(int data){
+    void addLast(int data){
         //Tạo 1 Node mới
         Node newNode = new Node(data);
         if(head == null){//thêm 1 nút vào ds rỗng
@@ -61,7 +61,7 @@ public class MyLinkedList {
     }
 
     void find(){
-        
+
     }
-        
+    
 }

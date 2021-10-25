@@ -3,11 +3,11 @@ package com.duclv2004110028.tuan07;
 public class Node {
     //Nội dung
     int data; 
-    int position;
+
     //Liên kết đến nút tiếp theo
     //Tham chiếu
     Node next;//Biến tham chiếu kiểu Node
-    
+   
     public Node(){}
 
     public Node(int d){
