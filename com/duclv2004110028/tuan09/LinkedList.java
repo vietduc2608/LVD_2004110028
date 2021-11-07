@@ -28,7 +28,7 @@ public class LinkedList {
             this.size++;
             return;
         }
-        
+        //thêm cuối
         if(position >= this.size)
         {
             if(this.tail != null)
