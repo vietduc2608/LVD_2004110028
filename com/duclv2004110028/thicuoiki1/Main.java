@@ -12,7 +12,7 @@ public class Main {
         ThucPham thucPham = new ThucPham();
         Scanner sc = new Scanner(System.in);
         thucPham.NhapDuLieu();
-        // linkedList.addLast(new NodeThucPham(new ThucPham("thit", 10, 20000, 29/11/2021)),10);
+        linkedList.addLast(new NodeThucPham(new ThucPham("thit", 10, 2000, 29/11/2021)),10);
     }
 }
         

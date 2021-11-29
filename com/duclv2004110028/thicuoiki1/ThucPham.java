@@ -15,10 +15,11 @@ public class ThucPham{
     public static int autoId;
     ThucPham(){}
 
-    public ThucPham(String tenHangHoa, int soLuongTonKho, int maHang, float giaNhap, Date ngayNhapKho) {
+    public ThucPham(String tenHangHoa, int soLuongTonKho, float giaNhap, Date ngayNhapKho) {
+        this.MaHang = ThucPham.autoId++;
         this.TenHangHoa = tenHangHoa;
         this.SoLuongTonKho = soLuongTonKho;
-        this.MaHang = maHang;
+        // this.MaHang = maHang;
         this.GiaNhap = giaNhap;
         this.NgayNhapKho = ngayNhapKho;
     }
