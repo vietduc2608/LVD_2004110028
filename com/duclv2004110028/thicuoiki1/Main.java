@@ -1,14 +1,17 @@
 package com.duclv2004110028.thicuoiki1;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
+    static Scanner sc = new Scanner(System.in);
+    static List<ThucPham> thucpham = new ArrayList<>();
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        Main main = new Main();
+        
         int n;
         do {
-            main.menu();
+            menu();
             n = sc.nextInt();
             sc.nextLine();
             switch (n) {
@@ -50,7 +53,13 @@ public class Main {
         }
 
     private static void themHangHoa(){
-
+        System.out.println("Nhập Số Lượng Muốn Thêm: ");
+        int n = sc.nextInt();
+        for (int i = 0; i < n; i++) {
+            ThucPham tp = new ThucPham();
+            tp.NhapDuLieu();
+            thucpham.add(tp);
+        }
     }
 
     private static void suaHoangHoa(){
@@ -58,7 +67,13 @@ public class Main {
     }
 
     private static void xoaHangHoa(){
-
+        System.out.println("Nhập Thực Phẩm Muốn Xóa: ");
+        int maHang = sc.nextInt();
+        for (ThucPham thucPham2 : thucpham) {
+            if(thucPham2.MaHang == maHang){
+                thucpham.remove(thucPham2);
+            }
+        }
     }
 
     private static void timKiem(){
@@ -75,6 +90,14 @@ public class Main {
 
     private static void thongKe(){
 
+    }
+
+    private static void xuatThongTin(){
+        System.out.println("=======Thông Tin Hàng Hóa=======");
+        System.out.printf("%-20S %-20S %-20S %-20S %-20S\n", "Mã Hàng Hóa", "Tên Hàng Hóa", "Số Lượng Tồn Kho", "Giá Nhập", "Ngày Nhập Kho");
+        for (ThucPham thucPham2 : thucpham) {
+            thucPham2.inThongTin();
+        }
     }
 }
 
