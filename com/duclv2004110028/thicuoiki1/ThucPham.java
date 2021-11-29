@@ -73,12 +73,14 @@ public class ThucPham{
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhập Mã Sản Phẩm: ");
         MaHang = sc.nextInt();
+        sc.nextLine();
         System.out.println("Nhập Tên Sản Phẩm: ");
         TenHangHoa = sc.nextLine();
         System.out.println("Nhập Giá Nhập: ");
         GiaNhap = sc.nextFloat();
         System.out.println("Nhập Số Lượng Tồn Kho: ");
         SoLuongTonKho = sc.nextInt();
+        sc.nextLine();
         System.out.println("Nhập Ngày Nhập Kho: ");
         String ngayNhapKhoString = sc.nextLine();
         if(ngayNhapKhoString.equals("")){

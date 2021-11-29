@@ -35,6 +35,10 @@ public class Main {
                     break;
                 case 7:
                     thongKe();
+                    break;
+                case 8:
+                    xuatThongTin();
+                    break;
                 default:
                     break;
             }
@@ -42,7 +46,7 @@ public class Main {
     }
 
     public static void menu() {
-        System.out.print("******************");
+        System.out.println("=======================");
         System.out.println("1.========Thêm Hàng Hóa=========");
         System.out.println("2.=========Xóa Hàng Hóa=========");
         System.out.println("3.=========Sửa Hàng Hóa=========");
@@ -50,7 +54,10 @@ public class Main {
         System.out.println("5.=======Sắp Xếp Tăng Dần=======");
         System.out.println("6.=======Sắp Xếp Giảm Dần=======");
         System.out.println("7.============Thống Kê==========");
+        System.out.println("8.==========Xuất Thông Tin======");
+        System.out.println("Nhập lựa chọn của bạn: ");
         }
+        
 
     private static void themHangHoa(){
         System.out.println("Nhập Số Lượng Muốn Thêm: ");
@@ -67,11 +74,11 @@ public class Main {
     }
 
     private static void xoaHangHoa(){
-        System.out.println("Nhập Thực Phẩm Muốn Xóa: ");
+        System.out.println("Nhập Mã Thực Phẩm Muốn Xóa: ");
         int maHang = sc.nextInt();
-        for (ThucPham thucPham2 : thucpham) {
-            if(thucPham2.MaHang == maHang){
-                thucpham.remove(thucPham2);
+        for (ThucPham thucPham : thucpham) {
+            if(thucPham.MaHang == maHang){
+                thucpham.remove(thucPham);
             }
         }
     }
