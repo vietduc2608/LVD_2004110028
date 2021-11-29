@@ -102,8 +102,8 @@ public class Main {
     private static void xuatThongTin(){
         System.out.println("=======Thông Tin Hàng Hóa=======");
         System.out.printf("%-20S %-20S %-20S %-20S %-20S\n", "Mã Hàng Hóa", "Tên Hàng Hóa", "Số Lượng Tồn Kho", "Giá Nhập", "Ngày Nhập Kho");
-        for (ThucPham thucPham2 : thucpham) {
-            thucPham2.inThongTin();
+        for (ThucPham thucPham : thucpham) {
+            thucPham.inThongTin();
         }
     }
 }
