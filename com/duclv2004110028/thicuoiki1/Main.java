@@ -1,18 +1,33 @@
 package com.duclv2004110028.thicuoiki1;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-    // static Scanner sc = new Scanner(System.in);
-    // static List<ThucPham> thucpham = new ArrayList<>();
-    public static void main(String[] args) {
+    static Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) throws ParseException {
         linkedlist linkedList = new linkedlist();
         ThucPham thucPham = new ThucPham();
-        Scanner sc = new Scanner(System.in);
-        thucPham.NhapDuLieu();
-        linkedList.addLast(new NodeThucPham(new ThucPham("thit", 10, 2000, 29/11/2021)),10);
+        NodeThucPham nodeTp = new NodeThucPham(thucPham);
+        
+        System.out.println("Nhap So Luong Muon Them: ");
+        int n = sc.nextInt();
+        for (int i = 0; i < n; i++) {
+            thucPham.NhapDuLieu();
+            
+        }
+        linkedList.addLast(nodeTp, n);
+        linkedList.showData();
+        // ThucPham thucPham = new ThucPham();
+        // Scanner sc = new Scanner(System.in);
+        // thucPham.NhapDuLieu();
+        
+        // linkedList.addLast(new NodeThucPham(new ThucPham("Bia", 2,12, new Date(11/29/2020))),10);      
+    
     }
 }
         

@@ -18,15 +18,17 @@ public class linkedlist {
     }
 
     public void addLast(NodeThucPham nThucPham,int position){
-        if(this.tail != null){
-            this.tail.next = nThucPham;
+        if(position >= this.size){
+            if(this.tail != null){
+                this.tail.next = nThucPham;
+            }
+            this.tail = nThucPham;
+            if(this.head == null){
+                this.head = nThucPham;
+            }
+            this.size++;
+            return;
         }
-        this.tail = nThucPham;
-        if(this.head == null){
-            this.head = nThucPham;
-        }
-        this.size++;
-        return;
     }
 
     public void showData(){

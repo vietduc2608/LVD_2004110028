@@ -4,32 +4,33 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
-import java.util.logging.Logger;
-import java.util.logging.Level;
 
-public class ThucPham{
+public class ThucPham {
     String TenHangHoa;
-    int SoLuongTonKho, MaHang;      
+    String loai = null;
+    int SoLuongTonKho, MaHang;
     float GiaNhap;
-    Date NgayNhapKho;   
+    Date NgayNhapKho;
+    SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
+    Scanner sc = new Scanner(System.in);
     public static int autoId;
-    ThucPham(){}
+    
+    public ThucPham() {}
 
-    public ThucPham(String tenHangHoa, int soLuongTonKho, float giaNhap, Date ngayNhapKho) {
-        this.MaHang = ThucPham.autoId++;
-        this.TenHangHoa = tenHangHoa;
-        this.SoLuongTonKho = soLuongTonKho;
-        // this.MaHang = maHang;
-        this.GiaNhap = giaNhap;
-        this.NgayNhapKho = ngayNhapKho;
-    }
-    //-------------------begin getter and setter-----------------------
     public String getTenHangHoa() {
         return TenHangHoa;
     }
 
     public void setTenHangHoa(String tenHangHoa) {
         TenHangHoa = tenHangHoa;
+    }
+
+    public String getLoai() {
+        return loai;
+    }
+
+    public void setLoai(String loai) {
+        this.loai = loai;
     }
 
     public int getSoLuongTonKho() {
@@ -63,34 +64,68 @@ public class ThucPham{
     public void setNgayNhapKho(Date ngayNhapKho) {
         NgayNhapKho = ngayNhapKho;
     }
-    //-------------------end getter and setter-----------------------
 
-    public void inThongTin(){
-        System.out.printf("%-20S %-20S %-20S %-20S %-20S\n", MaHang, TenHangHoa, SoLuongTonKho, GiaNhap, NgayNhapKho);
+    // public static int getAutoId() {
+    //     return autoId;
+    // }
+
+    // public static void setAutoId(int autoId) {
+    //     ThucPham.autoId = autoId;
+    // }
+
+    public ThucPham(String tenHangHoa, String loai, int soLuongTonKho, float giaNhap, Date ngayNhapKho) {
+        MaHang = ThucPham.autoId++;
+        TenHangHoa = tenHangHoa;
+        this.loai = loai;
+        SoLuongTonKho = soLuongTonKho;
+        GiaNhap = giaNhap;
+        NgayNhapKho = ngayNhapKho;
     }
-    
-    public void NhapDuLieu(){
-        SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Nhập Mã Sản Phẩm: ");
-        MaHang = sc.nextInt();
+    // -------------------end getter and setter-----------------------
+
+    public void inThongTin() {
+        System.out.println("=============================================Thông Tin Hàng Hóa=============================================================");
+        System.out.printf("%-20S %-20S %-20S %-20S %-20S %-20S\n", "Ma Hang Hoa", "Ten Hang Hoa", "Loai" ,"So Luong Ton Kho", "Gia Nhap", "Ngay Nhap Kho");
+        System.out.printf("%-20d %-20S %-20S %-20d %-20.2fVND %-20S\n", this.autoId, this.TenHangHoa, this.loai, this.SoLuongTonKho, this.GiaNhap,this.format.format(NgayNhapKho) );
+    }
+
+    public void NhapDuLieu() {
+        int l;
+        // System.out.println("Nhập Mã Sản Phẩm: ");
+        // MaHang = sc.nextInt();
+        // sc.nextLine();
+        System.out.println("Chon Loai");
+        System.out.println("Loai 1; Loai 2; Loai 3;");
+        l = sc.nextInt();
+        if (l == 1) {
+            loai = "Thuc Pham";
+        }
+        if (l == 2) {
+            loai = "Sanh Su";
+        }
+        if (l == 3) {
+            loai = "Dien May";
+        }
+        if( l > 3){
+            loai = "Lua Chon Khong Hop Le!!!";
+        }
         sc.nextLine();
-        System.out.println("Nhập Tên Sản Phẩm: ");
+        System.out.println("Nhap Ten San Pham: ");
         TenHangHoa = sc.nextLine();
-        System.out.println("Nhập Giá Nhập: ");
+        System.out.println("Nhap Gia Nhap: ");
         GiaNhap = sc.nextFloat();
-        System.out.println("Nhập Số Lượng Tồn Kho: ");
+        System.out.println("Nhap So Luong Ton Kho: ");
         SoLuongTonKho = sc.nextInt();
         sc.nextLine();
-        System.out.println("Nhập Ngày Nhập Kho: ");
+        System.out.println("Nhap Ngay Nhap Kho: ");
         String ngayNhapKhoString = sc.nextLine();
-        if(ngayNhapKhoString.equals("")){
+        if (ngayNhapKhoString.equals("")) {
             NgayNhapKho = null;
-        }else{
-            try{
-                NgayNhapKho = format.parse(ngayNhapKhoString);   
-            }catch (ParseException ex){
-                Logger.getLogger(ThucPham.class.getName()).log(Level.SEVERE, null, ex);
+        } else {
+            try {
+                NgayNhapKho = format.parse(ngayNhapKhoString);
+            } catch (ParseException ex) {
+                System.out.println("Ngay Khong Hop Le!!!!!");
             }
         }
     }
