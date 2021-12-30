@@ -22,7 +22,8 @@ public class NodeHangHoa {
         this.next = null;
     }
     
-    public boolean id(int id){
+    public boolean ID(int id){
         return this.hangHoa.getID() == id;
     }
+
 }

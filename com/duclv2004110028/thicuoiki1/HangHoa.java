@@ -13,8 +13,8 @@ public class HangHoa{
     String strDate = df.format(ngayNhap);
     public HangHoa(){}
     
-    public int getiD() {
-        return autoId;
+    public int getID() {
+        return ID;
     }
     public void setiD(int ID) {
         this.ID = ID;
